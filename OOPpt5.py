@@ -27,16 +27,11 @@ class Library:
         self.books.append(book) #Adds book to empty list.
 
     def search_Book(self, input):
-            match input:
-                case "1":
-                    print("Searching by Title...")
-                case "2":
-                    print("Searching by Author...")
-                case "3":
-                    print("Searching by ISBN...")
-                case _:
-                    print("Error.")
-
+        
+        if input == "1":
+            print("Searching for title")
+        else:
+            print("Error")
 
 myLibrary = Library() #Create the empty list for "books" in class "Library"
 book1 = Book("The Lord of the Rings", "AuthorName", 12345, True) #Creates new book
@@ -44,5 +39,3 @@ myLibrary.add_book(book1) #Method inside library, function that takes value of b
 
 userInput = input("Search by 1. Title, 2. Author, 3. ISBN. Enter value: ")
 myLibrary.search_Book(userInput)
-
-#a tiny change
